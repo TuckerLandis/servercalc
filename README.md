@@ -17,3 +17,6 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 server setup
 
 succesful ajax value transmission
+
+html--
+2inputs - type of math operator (4buttons) - equals button and clear
