@@ -82,6 +82,8 @@ function clickSubmit(){
     }).then(function (response) {
         console.log(response);
 
+
+
         getHistory();
         
 }) //end then and ajax
@@ -101,7 +103,11 @@ function getHistory(){
         method: 'GET',
         url: '/mathList'
     }).then(function (response){
-        console.log(response);
+        console.log('106106106!!', response);
+        $('#resultsTable').empty();
+        response.forEach(thing => {
+            $('#resultsTable').append(`<li>${thing.string}</li>`)
+        });
         
     })
     
