@@ -43,28 +43,30 @@ function newObjSet(){
     
 }
 
+/// these should be one, but it works
 function clickPlus(){
     console.log('clicked plus');
-    operator = {operator:'plus'};
+    operator = {operator:'+'};
 }
 
 function clickSub(){
     console.log('clicked sub');
-    operator = {operator:'sub'};
+    operator = {operator:'-'};
     
 }
 
 function clickMult(){
     console.log('clicked mult');
-    operator = {operator:'mult'};
+    operator = {operator:'*'};
     
 }
 
 function clickDivide(){
     console.log('clicked divide');
-    operator = {operator:'divide'};
+    operator = {operator:'/'};
     
 }
+
 
 function clickSubmit(){
     console.log('clicked submit');

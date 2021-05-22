@@ -50,13 +50,13 @@ function mathBlaster(mathList) {
     mathList.forEach(thing => {
         switch (thing.operator)
 {
-    case 'plus': thing.sum = (Number(thing.num1) + Number(thing.num2))
+    case '+': thing.sum = (Number(thing.num1) + Number(thing.num2))
         break;
-    case 'sub': thing.sum = (Number(thing.num1) - Number(thing.num2))
+    case '-': thing.sum = (Number(thing.num1) - Number(thing.num2))
         break;
-    case 'mult': thing.sum = (Number(thing.num1) * Number(thing.num2))
+    case '*': thing.sum = (Number(thing.num1) * Number(thing.num2))
         break;
-    case 'divide': thing.sum = (Number(thing.num1) / Number(thing.num2))
+    case '/': thing.sum = (Number(thing.num1) / Number(thing.num2))
         break;
     default: console.log('ln 61 mathBlaster is broken');
     
