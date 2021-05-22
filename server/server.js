@@ -35,3 +35,10 @@ app.get('/mathList', (req, res) => {
     res.send(mathList);
     // instead of getting from the math array and doing work on the client to display, could format it in the server?
 })
+
+
+
+
+/// server functions
+
+// to do - split newest object up, perfom math, send back history -- also maybe a seperate get to get the sum/diff and display on the right side of page?

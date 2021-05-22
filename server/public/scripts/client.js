@@ -1,11 +1,10 @@
-console.log('JS');
 
 $(readyNow)
 
 let newObj = {};
 
 function readyNow() {
-    console.log('JQ');
+    
     
     //click listeners
     $('#buttonPlus').on('click', clickPlus);
