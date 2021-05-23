@@ -2,6 +2,7 @@
 $(readyNow)
 
 let newObj = {};
+let returnedObjects= [];
 
 function readyNow() {
     
@@ -106,6 +107,11 @@ function getHistory(){
         url: '/mathList'
     }).then(function (response){
         console.log('106106106!!', response);
+
+        returnedObjects = response; 
+
+        $('#answerDisplay').text(returnedObjects[returnedObjects.length - 1].sum)
+
         $('#resultsTable').empty();
         response.forEach(thing => {
             $('#resultsTable').append(`<li>${thing.string}</li>`)

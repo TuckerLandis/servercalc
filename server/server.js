@@ -48,6 +48,7 @@ app.get('/mathList', (req, res) => {
 
 function mathBlaster(mathList) {
     mathList.forEach(thing => {
+
         switch (thing.operator)
 {
     case '+': thing.sum = (Number(thing.num1) + Number(thing.num2))
@@ -70,7 +71,7 @@ function mathBlaster(mathList) {
 
 
 
-// to do - split newest object up, perfom math, send back history -- also maybe a seperate get to get the sum/diff and display on the right side of page?
+// to do maybe a seperate get to get the sum/diff and display on the right side of page?
 
 function formatter(mathList) {
     console.log('ln 76 formatter in: ', mathList);
