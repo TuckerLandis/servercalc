@@ -12,9 +12,7 @@
 
 .hdrsm {
     background-color: #326273;
-   
     color: #5c9ead;
-    font-size: 50pt;
     text-align: center;
     font-weight: bolder;
     -webkit-text-stroke: 1.5px black;
@@ -49,7 +47,7 @@ body{
 
 ul {
     list-style: none;
-    font-size: 28pt;
+    font-size: 32pt;
     text-align: center;
 }
 
