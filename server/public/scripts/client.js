@@ -6,7 +6,6 @@ let returnedObjects= [];
 
 function readyNow() {
     
-    
     //click listeners
     $('#buttonPlus').on('click', clickPlus);
     $('#buttonSub').on('click', clickSub);
@@ -18,30 +17,12 @@ function readyNow() {
     getHistory();
     
     let operator = {};
-
 }
 
-
-// function to collect and wrap object
-// post to server
-// on = press, send and clear inputs
-// on C press clear the inputs
-
-
-// on page refresh load (append history from server)
-
-
-/// possibilities for order - clicking submit sends an onbject || clicking submit adds an object to an array and also sends--too complicated maybe needed though
-
-
-
-function newObjSet(){
-    // make a new empty object on page load - tied to line 16
-    
+function newObjSet(){ 
     newObj.num1 = $('#inputNum1').val();
     newObj.num2 = $('#inputNum2').val();
     newObj.operator = operator.operator;
-    
 }
 
 /// these should be one, but it works
@@ -52,20 +33,17 @@ function clickPlus(){
 
 function clickSub(){
     console.log('clicked sub');
-    operator = {operator:'-'};
-    
+    operator = {operator:'-'};  
 }
 
 function clickMult(){
     console.log('clicked mult');
-    operator = {operator:'*'};
-    
+    operator = {operator:'*'}; 
 }
 
 function clickDivide(){
     console.log('clicked divide');
-    operator = {operator:'/'};
-    
+    operator = {operator:'/'};   
 }
 
 
@@ -77,20 +55,16 @@ function clickSubmit(){
     $('#inputNum1').val('');
     $('#inputNum2').val('');
 
-    // ajax post // on server receive and probably split to history - math functions 
     $.ajax({
         method: 'POST',
         url: '/objCatcher',
         data: newObj,
     }).then(function (response) {
         console.log(response);
-
-
-
         getHistory();
         
-}) //end then and ajax
-} // end clickSub
+}) 
+} 
 
 function clickClear() {
     console.log('clicked clear');
@@ -115,8 +89,6 @@ function getHistory(){
         $('#resultsTable').empty();
         response.forEach(thing => {
             $('#resultsTable').append(`<li>${thing.string}</li>`)
-        });
-        
-    })
-    
+        });  
+    }) 
 }
