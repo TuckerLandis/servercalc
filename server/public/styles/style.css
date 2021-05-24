@@ -28,6 +28,8 @@
     box-shadow: 2px 2px  cyan;
     border: 1.5px solid black;
     border-radius: 0.5px;
+    width: 3em;
+    height: 100%;
 }
 
 body{
