@@ -5,6 +5,8 @@ let newObj = {};
 let returnedObjects= [];
 
 function readyNow() {
+
+    $('#answerDisplay').empty();
     
     //click listeners
     $('#buttonPlus').on('click', clickPlus);
