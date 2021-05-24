@@ -71,14 +71,16 @@ function clickDivide(){
 
 // this handles the following on clicking equals 
 // setting an object to the values in the number inputs
-// setting 
+// setting operator property of object
 // alerts for empty inputs or operator blank
 // clears values and removes selected operator class
 // posts data to server in the mathList array and gets the formatted math list after a succesful post
 
 function clickSubmit(){
     console.log('clicked submit');
+
     newObjSet();
+    
     console.log(newObj);
 
     if (newObj.num1 == '' || newObj.num2 == ''){
