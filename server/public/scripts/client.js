@@ -29,21 +29,40 @@ function newObjSet(){
 function clickPlus(){
     console.log('clicked plus');
     operator = {operator:'+'};
+    $('#buttonPlus').addClass('selected');
+    $('#buttonSub').removeClass('selected');
+    $('#buttonMult').removeClass('selected');
+    $('#buttonDivide').removeClass('selected');
+
+
 }
 
 function clickSub(){
     console.log('clicked sub');
     operator = {operator:'-'};  
+    $('#buttonPlus').removeClass('selected');
+    $('#buttonSub').addClass('selected');
+    $('#buttonMult').removeClass('selected');
+    $('#buttonDivide').removeClass('selected');
+    
 }
 
 function clickMult(){
     console.log('clicked mult');
     operator = {operator:'*'}; 
+    $('#buttonPlus').removeClass('selected');
+    $('#buttonSub').removeClass('selected');
+    $('#buttonMult').addClass('selected');
+    $('#buttonDivide').removeClass('selected');
 }
 
 function clickDivide(){
     console.log('clicked divide');
     operator = {operator:'/'};   
+    $('#buttonPlus').removeClass('selected');
+    $('#buttonSub').removeClass('selected');
+    $('#buttonMult').removeClass('selected');
+    $('#buttonDivide').addClass('selected');
 }
 
 
@@ -51,6 +70,16 @@ function clickSubmit(){
     console.log('clicked submit');
     newObjSet();
     console.log(newObj);
+
+    if (newObj.num1 == '' || newObj.num2 == ''){
+        console.log('error Empty Number');
+        alert('One of the number inputs is empty :(')
+        return;
+    }   else if (newObj.operator == '') {
+        console.log('error Empty Operator');
+        alert('You have not selected a math operation')
+        return;
+    }
 
     $('#inputNum1').val('');
     $('#inputNum2').val('');
@@ -70,6 +99,7 @@ function clickClear() {
     console.log('clicked clear');
     $('#inputNum1').val('');
     $('#inputNum2').val('');
+    operator.operator = '';
     
 }
 

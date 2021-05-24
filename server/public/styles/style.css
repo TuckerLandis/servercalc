@@ -63,11 +63,14 @@ ul {
     box-shadow: 2px 2px  cyan;
 }
 
-.seperator {
-    width: 60px;
-}
+
 
 hr {
     border: 10px solid black;
     border-radius: 5px;
+}
+
+.selected {
+    background-color: #326273;
+   color: magenta;
 }
