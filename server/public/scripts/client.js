@@ -5,8 +5,9 @@ let newObj = {};
 let returnedObjects= [];
 
 function readyNow() {
-    $('#answerDisplay').empty();
-    $('#answerDisplay').append('0 . 0');
+    
+    
+    $('#answerDisplay').text('-(0) _ (0)-');
     
     //click listeners
     $('#buttonPlus').on('click', clickPlus);
