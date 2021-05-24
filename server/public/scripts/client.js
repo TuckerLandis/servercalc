@@ -31,7 +31,7 @@ function newObjSet(){
 }
 
 /// these could be one, but it works, also nice to have the easy(er) changing of class when clicking an operator
-// they set an operator's property of operator to the selected operator
+// they set an operator object's property of operator to the selected operator
 
 function clickPlus(){
     console.log('clicked plus');
