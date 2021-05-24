@@ -103,8 +103,7 @@ function clickSubmit(){
         data: newObj,
     }).then(function (response) {
         console.log(response);
-        getHistory();
-        
+        getHistory();       
 }) 
 } 
 
@@ -113,8 +112,7 @@ function clickClear() {
     console.log('clicked clear');
     $('#inputNum1').val('');
     $('#inputNum2').val('');
-    operator.operator = '';
-    
+    operator.operator = ''; 
 }
 
 // this gets history, based on the stack in the get route on the server, which performs math on the mathList, and then formats it, and appends it
