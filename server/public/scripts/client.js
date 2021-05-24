@@ -83,6 +83,7 @@ function clickSubmit(){
 
     $('#inputNum1').val('');
     $('#inputNum2').val('');
+    $('button').removeClass('selected');
 
     $.ajax({
         method: 'POST',
