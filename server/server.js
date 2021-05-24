@@ -49,6 +49,7 @@ app.get('/mathList', (req, res) => {
 })
 
 // based on the selected operator when the object is sent from dom, this function performs, or even some could say "blasts" some math a la Davidson & Associates famous 2000 pc game "Math Blaster 1: in Search of Spot"
+// it sets a sum property on the object to the result of the calculation
 
 function mathBlaster(mathList) {
     mathList.forEach(thing => {
