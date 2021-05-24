@@ -22,13 +22,17 @@ function readyNow() {
     let operator = {};
 }
 
+// on page load, there is an empty object, on running the below function, which happens on click of the equals button, the "newObj" is assigned the apporopriate values according to my data model
+
 function newObjSet(){ 
     newObj.num1 = $('#inputNum1').val();
     newObj.num2 = $('#inputNum2').val();
     newObj.operator = operator.operator;
 }
 
-/// these should be one, but it works
+/// these could be one, but it works, also nice to have the easy(er) changing of class when clicking an operator
+// they set an operator's property of operator to the selected operator
+
 function clickPlus(){
     console.log('clicked plus');
     operator = {operator:'+'};
@@ -36,8 +40,6 @@ function clickPlus(){
     $('#buttonSub').removeClass('selected');
     $('#buttonMult').removeClass('selected');
     $('#buttonDivide').removeClass('selected');
-
-
 }
 
 function clickSub(){
@@ -47,7 +49,6 @@ function clickSub(){
     $('#buttonSub').addClass('selected');
     $('#buttonMult').removeClass('selected');
     $('#buttonDivide').removeClass('selected');
-    
 }
 
 function clickMult(){
@@ -68,6 +69,12 @@ function clickDivide(){
     $('#buttonDivide').addClass('selected');
 }
 
+// this handles the following on clicking equals 
+// setting an object to the values in the number inputs
+// setting 
+// alerts for empty inputs or operator blank
+// clears values and removes selected operator class
+// posts data to server in the mathList array and gets the formatted math list after a succesful post
 
 function clickSubmit(){
     console.log('clicked submit');
@@ -99,6 +106,7 @@ function clickSubmit(){
 }) 
 } 
 
+// this simply clears the inputs and operator when clicked
 function clickClear() {
     console.log('clicked clear');
     $('#inputNum1').val('');
@@ -106,6 +114,9 @@ function clickClear() {
     operator.operator = '';
     
 }
+
+// this gets history, based on the stack in the get route on the server, which performs math on the mathList, and then formats it, and appends it
+// it also appends the latest calculations sum property to the dom in the answerdisplay section
 
 function getHistory(){
     console.log('loading history');

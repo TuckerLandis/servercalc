@@ -48,6 +48,8 @@ app.get('/mathList', (req, res) => {
 
 })
 
+// based on the selected operator when the object is sent from dom, this function performs, or even some could say "blasts" some math a la Davidson & Associates famous 2000 pc game "Math Blaster 1: in Search of Spot"
+
 function mathBlaster(mathList) {
     mathList.forEach(thing => {
 
@@ -71,7 +73,7 @@ function mathBlaster(mathList) {
     }) // end foreach
 } // end mathBlaster
 
-
+// this function simply formats a string proprty on the mathList objects set to the logical order of a math calculation
 function formatter(mathList) {
     console.log('ln 76 formatter in: ', mathList);
 
